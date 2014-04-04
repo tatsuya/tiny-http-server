@@ -4,7 +4,7 @@ A tiny http server for command line.
 
 ## Installation
 
-    $ npm install tiny-http-server
+    $ npm install -g tiny-http-server
 
 ## Example
 
