@@ -1,0 +1,24 @@
+{
+  "name": "tiny-http-server",
+  "version": "0.0.1",
+  "description": "A tiny http server for command line.",
+  "main": "tiny-http-server.js",
+  "bin": {
+    "tiny-http-server": "tiny-http-server.js"
+  },
+  "dependencies": {
+    "commander": "~2.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tatsuyaoiw/tiny-http-server.git"
+  },
+  "keywords": [
+    "http",
+    "server",
+    "command"
+  ],
+  "author": "Tatsuya Oiwa <tatsuyaoiw@gmail.com>",
+  "license": "MIT"
+}
