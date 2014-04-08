@@ -16,6 +16,8 @@ var http = require('http');
 
 var server = http.createServer(function(req, res) {
   console.log('[%s] "%s %s" "%s"', (new Date).toUTCString(), req.method, req.url, req.headers['user-agent']);
+  res.setHeader('Content-Length', body.length);
+  res.setHeader('Content-Type', 'text/plain');
   res.statusCode = status;
   res.end(body);
 });
