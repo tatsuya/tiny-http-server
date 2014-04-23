@@ -10,7 +10,7 @@ commander
 
 var port = commander.port || 3333;
 var status = commander.status || 200;
-var body = commander.body;
+var body = commander.body || '';
 
 var http = require('http');
 
