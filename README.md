@@ -4,7 +4,7 @@ A tiny, zero configuration HTTP server to serve static content from command line
 
 ## Installation
 
-This is a command line too so it is recommended to install grobally, via NPM:
+This is a command line tool so it is recommended to install grobally, via NPM:
 
 ```
 $ npm install -g tiny-http-server
