@@ -1,17 +1,35 @@
 # tiny-http-server
 
-A tiny http server for command line.
+A tiny, zero configuration HTTP server to serve static content from command line.
 
 ## Installation
 
-    $ npm install -g tiny-http-server
+This is a command line too so it is recommended to install grobally, via NPM:
 
-## Example
+```
+$ npm install -g tiny-http-server
+```
 
-    $ tiny-http-server -p 3333 -s 200 -b "ok"
-    $ tiny-http-server -p 4444 -s 404 -b "notfound"
-    $ tiny-http-server -p 5555 -s 503 -b "unavailable"
-    $ tiny-http-server -p 5555 -s 200 -b "<html><title>Hello</title><body>Hi there!</body></html>" -c "text/html"
+## Usage
+
+Serve a text "ok" with status code 200 on port 3333.
+
+```
+$ tiny-http-server -p 3333 -s 200 -b "ok"
+```
+
+404 not found or 503 service unavailable.
+
+```
+$ tiny-http-server -p 4444 -s 404 -b "notfound"
+$ tiny-http-server -p 5555 -s 503 -b "unavailable"
+```
+
+Even possible to specify content type using `-c` option.
+
+```
+$ tiny-http-server -p 6666 -s 200 -b "<html><title>Hello</title><body>Hi there!</body></html>" -c "text/html"
+```
 
 ## Options
 
@@ -26,3 +44,7 @@ A tiny http server for command line.
     -b, --body [content]        http body content
     -c, --content-type [value]  Content-Type header value
 ```
+
+## Licence
+
+MIT
