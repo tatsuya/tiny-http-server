@@ -10,7 +10,7 @@ This is a command line tool so it is recommended to install grobally, via NPM:
 $ npm install -g tiny-http-server
 ```
 
-## Usage
+## Quickstart
 
 Serve a text "ok" with status code 200 on port 3333.
 
@@ -38,7 +38,7 @@ $ echo '<html><title>Hello</title><body>Hi there!</body></html>' > index.html
 $ tiny-http-server -p 7777 -s 200 -f index.html -c "text/html"
 ```
 
-## Options
+## Usage
 
 ```
   Usage: tiny-http-server [options]
