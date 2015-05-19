@@ -3,6 +3,7 @@
 
 var commander = require('commander');
 var fs = require('fs');
+var http = require('http');
 
 commander
   .option('-p, --port [num]', 'port number the server listen to')
@@ -14,12 +15,10 @@ commander
 
 var port = commander.port || 3333;
 var status = commander.status || 200;
-var filePath = commander.file || '';
-var fileContent = filePath ? fs.readFileSync(filePath) : '';
+var filePath = commander.file;
+var fileContent = typeof filePath === 'string' && fs.readFileSync(filePath);
 var body = commander.body || fileContent;
 var contentType = commander.contentType || 'text/plain';
-
-var http = require('http');
 
 var server = http.createServer(function(req, res) {
   console.log('[%s] "%s %s" "%s"', (new Date()).toUTCString(), req.method, req.url, req.headers['user-agent']);
