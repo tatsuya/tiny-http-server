@@ -25,10 +25,17 @@ $ tiny-http-server -p 4444 -s 404 -b "notfound"
 $ tiny-http-server -p 5555 -s 503 -b "unavailable"
 ```
 
-Even possible to specify content type using `-c` option.
+You can also specify content type using `-c` option.
 
 ```
 $ tiny-http-server -p 6666 -s 200 -b "<html><title>Hello</title><body>Hi there!</body></html>" -c "text/html"
+```
+
+Even possible to give a path to a file which you want to serve its content as body.
+
+```
+$ echo '<html><title>Hello</title><body>Hi there!</body></html>' > index.html
+$ tiny-http-server -p 7777 -s 200 -f index.html -c "text/html"
 ```
 
 ## Options
@@ -43,6 +50,7 @@ $ tiny-http-server -p 6666 -s 200 -b "<html><title>Hello</title><body>Hi there!<
     -s, --status [code]         http status code
     -b, --body [content]        http body content
     -c, --content-type [value]  Content-Type header value
+    -f, --file [path]           file to serve as http body content
 ```
 
 ## Licence
