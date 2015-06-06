@@ -1,7 +1,7 @@
 {
   "name": "tiny-http-server",
   "version": "0.2.0",
-  "description": "A tiny http server for command line.",
+  "description": "A tiny, zero configuration HTTP server to serve static content from command line.",
   "main": "tiny-http-server.js",
   "bin": {
     "tiny-http-server": "tiny-http-server.js"
